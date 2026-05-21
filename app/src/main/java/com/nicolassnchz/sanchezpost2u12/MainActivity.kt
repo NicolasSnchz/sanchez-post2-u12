@@ -1,4 +1,4 @@
-package com.nicolassnchz.sanchezpost1u10
+﻿package com.nicolassnchz.sanchezpost2u12
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -7,7 +7,6 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import com.nicolassnchz.sanchezpost1u10.ui.theme.SanchezPost1U10Theme
 import com.nicolassnchz.sanchezpost2u12.data.FakeNoteRepository
 import com.nicolassnchz.sanchezpost2u12.domain.model.Note
 import com.nicolassnchz.sanchezpost2u12.domain.usecase.GetNotesUseCase
@@ -22,7 +21,7 @@ class MainActivity : ComponentActivity() {
         val getNotesUseCase = GetNotesUseCase(repository)
 
         setContent {
-            SanchezPost1U10Theme {
+            MaterialTheme {
                 Surface(color = MaterialTheme.colorScheme.background) {
                     val selectedNote = remember { mutableStateOf<Note?>(null) }
                     val viewModel = remember { NotesViewModel(getNotesUseCase) }

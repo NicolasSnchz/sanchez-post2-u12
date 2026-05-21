@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.nicolassnchz.sanchezpost1u11.feature.notes"
+    namespace = "com.nicolassnchz.sanchezpost2u12.feature.notes"
     compileSdk = 36
 
     defaultConfig {
@@ -21,13 +21,16 @@ dependencies {
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
-    implementation(libs.androidx.lifecycle.viewmodel.compose)
-    implementation(libs.androidx.lifecycle.runtime.compose)
-    implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
 
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.material3)
 
     implementation(libs.kotlinx.coroutines.android)
+
+    testImplementation(project(":core:domain"))
+    testImplementation(libs.junit)
+    testImplementation(libs.kotlinx.coroutines.test)
+    testImplementation(libs.turbine)
 }

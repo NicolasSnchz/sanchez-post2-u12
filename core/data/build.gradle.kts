@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.nicolassnchz.sanchezpost2u12.domain"
+    namespace = "com.nicolassnchz.sanchezpost2u12.data"
     compileSdk = 36
 
     defaultConfig {
@@ -12,5 +12,6 @@ android {
 }
 
 dependencies {
+    implementation(project(":core:domain"))
     implementation(libs.kotlinx.coroutines.core)
 }
